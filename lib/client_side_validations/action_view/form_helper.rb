@@ -41,11 +41,11 @@ module ClientSideValidations
           options[:html][:method] ||= options[:method]
 
           # TODO: remove else branch when minimum compatible version when dropping 6.1 support
-          if method(:apply_form_for_options!).arity == 2
+          # if method(:apply_form_for_options!).arity == 2
             apply_form_for_options! object, options
-          else
-            apply_form_for_options! record, object, options
-          end
+          # else
+          #   apply_form_for_options! record, object, options
+          # end
         end
 
         def fields_for(record_name, record_object = nil, options = {}, &block)
